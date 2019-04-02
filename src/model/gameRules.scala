@@ -10,8 +10,8 @@ object gameRules {
   def main(args :Array[String]): Unit ={
     var i = 0
     val list = List("Dan", "Jon", "Dave")
-    val images = file_to_list("/Users/alexcefarelli/Documents/HeadFailureProj2.0/src/imageFileNames")
-    val captions = file_to_list("/Users/alexcefarelli/Documents/HeadFailureProj2.0/src/captions")
+    val images = file_to_list("/model/game/imageFileNames")
+    val captions = file_to_list("/model/game/captions")
 
     println(images)
     println("^ List of all image files\n")
