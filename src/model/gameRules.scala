@@ -8,6 +8,7 @@ object gameRules {
   var czarIndex: Int = 0
   var image: String = ""
   var players: List[Player] = List()
+  var cardsPlayed: List[Card] = List()
 
 
   def file_to_list(filename: String): List[String] ={
@@ -41,5 +42,8 @@ object gameRules {
     Thread.sleep(1000)
   }
 
-
+  def submittedCards(received: Card): Unit ={
+    cardsPlayed = cardsPlayed :+ received
+    received.owner.cardSelected(received)
+  }
 }
