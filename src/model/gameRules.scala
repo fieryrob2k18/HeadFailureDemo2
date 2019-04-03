@@ -41,6 +41,5 @@ object gameRules {
     Thread.sleep(1000)
   }
 
-  def useCard()
 
 }
