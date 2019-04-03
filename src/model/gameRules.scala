@@ -1,7 +1,5 @@
 package model
 
-import java.security.KeyStore.TrustedCertificateEntry
-
 import scala.io.{BufferedSource, Source}
 import scala.util.Random
 
@@ -9,6 +7,7 @@ object gameRules {
 
   var czarIndex: Int = 0
   var image: String = ""
+  var players: List[Player] = List()
 
 
   def file_to_list(filename: String): List[String] ={
@@ -28,7 +27,7 @@ object gameRules {
   }
 
 
-  def czarTurn(players: List[Player]): Unit ={
+  def czarTurn(): Unit ={
     if(czarIndex >= players.length - 1) {
       czarIndex = 0
     }
@@ -41,5 +40,7 @@ object gameRules {
   def globalTimer(): Unit ={
     Thread.sleep(1000)
   }
+
+  def useCard()
 
 }
