@@ -15,8 +15,11 @@ class MyButton(game: Game, xScale: Double, yScale: Double) extends Button {
 }
 
 class Picture(game: Game, xScale: Double = 1.0, yScale: Double = 1.0) extends MyButton(game, xScale, yScale) {
-  gameRules.getImageFile(gameRules.file_to_list("model/game/imageFileNames"))
-  graphic = new ImageView(new Image (this, gameRules.image))
+  var gameRules = new gameRules
+  var fileConverted: List[String] = gameRules.file_to_list("/Users/alexcefarelli/Documents/HeadFailureDemo2/src/view/imageFileNames")
+  gameRules.getImageFile(fileConverted)
+  var image: String = gameRules.image
+  graphic = new ImageView(new Image (this, image))
   style = "-fx-font: 24 ariel;"
   disarm()
 }

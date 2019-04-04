@@ -3,7 +3,7 @@ package model
 import scala.io.{BufferedSource, Source}
 import scala.util.Random
 
-object gameRules {
+class gameRules {
 
   var czarIndex: Int = 0
   var image: String = ""
@@ -17,7 +17,7 @@ object gameRules {
 
     for(line <- file.getLines()){
       val cap: Array[String] = line.split(":")
-      parsed = cap(1) :: parsed
+      parsed = parsed :+ cap(1)
     }
     parsed
   }
