@@ -29,6 +29,7 @@ object gameRules {
 
 
   def czarTurn(): Unit ={
+    this.players.apply(czarIndex).isCzar = false
     if(czarIndex >= players.length - 1) {
       czarIndex = 0
     }
