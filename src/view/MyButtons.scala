@@ -2,7 +2,8 @@ package view
 
 import scalafx.Includes._
 import scalafx.event.ActionEvent
-import scalafx.scene.control.Button
+import scalafx.scene.control._
+import scalafx.scene.image.{Image, ImageView}
 
 class MyButton(game: Game, xScale: Double, yScale: Double) extends Button {
 
@@ -13,8 +14,7 @@ class MyButton(game: Game, xScale: Double, yScale: Double) extends Button {
 }
 
 class Picture(game: Game, xScale: Double = 1.0, yScale: Double = 1.0) extends MyButton(game, xScale, yScale) {
-//  var img = ImageIO.read("C:\Users\thewr\IdeaProjects\CSE116-Scala-Examples12\src\clicker\gui\run.jpg")
-  text = "This is going to be an Image"
+  graphic = new ImageView(new Image (this, "view/run.jpg"))
   style = "-fx-font: 24 ariel;"
   disarm()
 }
@@ -22,4 +22,8 @@ class Picture(game: Game, xScale: Double = 1.0, yScale: Double = 1.0) extends My
 
 class BuyEquipmentButton(val equipmentKey: String, game: Game, xScale: Double = 1.0, yScale: Double = 1.0) extends MyButton(game, xScale, yScale) {
   onAction = (event: ActionEvent) => game.buyEquipment(equipmentKey)
+}
+
+class BuyEquipmentButton1(val equipmentKey: String, game: Game, xScale: Double = 1.0, yScale: Double = 1.0) extends MyButton(game, xScale, yScale) {
+  disarm()
 }

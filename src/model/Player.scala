@@ -5,6 +5,7 @@ import scala.util.Random
 class Player(val name: String) {
   var cards: List[Card] = List()
   var isCzar: Boolean = false
+  var points: Int = 0
 
   def addWhiteCards(captions: List[String], amountOfCards: Int): Unit ={
     var i = 0

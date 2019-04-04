@@ -1,4 +1,4 @@
-package GameYourMeme.users
+package view
 
 class User4 extends Users{
 

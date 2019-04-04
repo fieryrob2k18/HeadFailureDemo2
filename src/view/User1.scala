@@ -2,18 +2,19 @@ package view
 
 class User1 extends Users {
 
-  this.name = "User1"
-  this.numberOwned = 0
+  this.name = ""
+  this.pointCount= 0
+  var czarIndex: Int = 0
 
-  override def goldPerClick(): Double = {
-    0.0
+  override def czarTurn(): Unit={
+    if(czarIndex >= players.length - 1) {
+      czarIndex = 0
+    }
+    else{
+      czarIndex += 1
+    }
+    players(czarIndex).isCzar = true
   }
 
-  override def goldPerSecond(): Double = {
-    0.0
-  }
 
-  override def costOfNextPurchase(): Double = {
-    0.0
-  }
 }

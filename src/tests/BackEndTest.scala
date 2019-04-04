@@ -15,7 +15,7 @@ class BackEndTest extends FunSuite {
     gameRules.czarTurn()
     assert(gameRules.czarIndex==2 && gameRules.players.apply(2).isCzar == true)
     gameRules.czarTurn()
-    assert(gameRules.czarTurn()==0 && gameRules.players.apply(0).isCzar == true && gameRules.players.apply(2).isCzar == false)
+    assert(gameRules.czarIndex==0 && gameRules.players.apply(0).isCzar == true && gameRules.players.apply(2).isCzar == false)
   }
 
   test("Cards Test"){
