@@ -60,6 +60,4 @@ object GUI extends JFXApp {
     equipmentButtons.foreach(x => x.text = game.buttonText(x.equipmentKey))
     equipmentButtons1.foreach(x => x.text = game.buttonText1(x.equipmentKey))
   }
-
-
 }

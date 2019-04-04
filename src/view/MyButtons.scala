@@ -4,6 +4,7 @@ import scalafx.Includes._
 import scalafx.event.ActionEvent
 import scalafx.scene.control._
 import scalafx.scene.image.{Image, ImageView}
+import model._
 
 class MyButton(game: Game, xScale: Double, yScale: Double) extends Button {
 
@@ -14,7 +15,8 @@ class MyButton(game: Game, xScale: Double, yScale: Double) extends Button {
 }
 
 class Picture(game: Game, xScale: Double = 1.0, yScale: Double = 1.0) extends MyButton(game, xScale, yScale) {
-  graphic = new ImageView(new Image (this, "view/run.jpg"))
+  gameRules.getImageFile(gameRules.file_to_list("model/game/imageFileNames"))
+  graphic = new ImageView(new Image (this, gameRules.image))
   style = "-fx-font: 24 ariel;"
   disarm()
 }
